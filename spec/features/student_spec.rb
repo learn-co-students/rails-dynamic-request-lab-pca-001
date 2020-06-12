@@ -24,7 +24,7 @@ describe 'Show page' do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
   end
 
-  it 'renders properly' do
+  it 'loads the show page' do
     visit "students/#{@student.id}"
     expect(page.status_code).to eq(200)
   end
